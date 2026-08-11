@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — LUMÉ</title>
+<link rel="icon" type="image/png" href="image.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="shop">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="section-tight">
+    <div class="container">
+      <p class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="shop.html" id="crumbCat">Shop</a> / <span id="crumbName">Product</span>
+      </p>
+
+      <div class="pd-layout">
+        <div>
+          <div class="pd-visual-main blob-frame" id="pdVisual"></div>
+          <div class="pd-thumbs" id="pdThumbs"></div>
+        </div>
+
+        <div class="pd-info">
+          <span class="product-cat" id="pdCat"></span>
+          <h1 id="pdName"></h1>
+          <div class="pd-rating">
+            <span class="stars" id="pdStars"></span>
+            <span id="pdRatingText"></span>
+          </div>
+          <div class="pd-price">
+            <span class="price" id="pdPrice"></span>
+            <span class="price-old" id="pdOldPrice" style="display:none;"></span>
+          </div>
+          <p class="pd-desc" id="pdDesc"></p>
+          <div class="pd-skintypes" id="pdSkinTypes"></div>
+
+          <div class="qty-row">
+            <div class="qty-control">
+              <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input id="qtyInput" type="number" min="1" value="1" />
+              <button id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="pd-actions">
+            <button class="btn btn-primary" id="pdAddBtn"><span id="pdAddIcon"></span> Add to Bag</button>
+            <button class="wish-toggle" id="pdWishBtn" aria-label="Save to wishlist"></button>
+          </div>
+
+          <div class="trust-row">
+            <div><svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 7h11v9H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M14 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="7" cy="18" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.6"/></svg> Free shipping over $50</div>
+            <div><svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 4c-9 0-14 5-14 12 0 1.2.2 2.2.5 3 6 0 11-4 13.5-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 20c2-5 5-7 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Clean, cruelty-free formula</div>
+            <div><svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 30-day return promise</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pd-tabs">
+        <div class="tab-heads">
+          <button class="tab-head active" data-tab="tabDesc">Description</button>
+          <button class="tab-head" data-tab="tabIngredients">Ingredients</button>
+          <button class="tab-head" data-tab="tabHowTo">How to Use</button>
+        </div>
+        <div class="tab-panel active" id="tabDesc"><p id="pdDescLong">Formulated in small batches with skin-loving botanicals, this product is designed to slot easily into your existing routine while delivering visible, lasting results.</p></div>
+        <div class="tab-panel" id="tabIngredients"><ul class="ingredient-list" id="pdIngredients"></ul></div>
+        <div class="tab-panel" id="tabHowTo"><p id="pdHowTo"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="relatedSection">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">You Might Also Love</span>
+        <h2>Complete the ritual</h2>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="data.js"></script>
+<script src="storage.js"></script>
+<script src="shared.js"></script>
+<script src="layout.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

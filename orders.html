@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Orders — LUMÉ</title>
+<link rel="icon" type="image/png" href="image.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="shop">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Home</a> / My Orders</p>
+      <span class="eyebrow" style="justify-content:center;">Order History</span>
+      <h1>My Orders</h1>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container" style="max-width: 780px;">
+      <div id="ordersList"></div>
+      <div class="empty-state" id="ordersEmpty" style="display:none;">
+        <div class="ic" id="ordersEmptyIc"></div>
+        <h3>No orders yet</h3>
+        <p>Once you place an order, it will show up here with live status updates.</p>
+        <a href="shop.html" class="btn btn-primary" style="margin-top:16px;">Start Shopping</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="data.js"></script>
+<script src="storage.js"></script>
+<script src="shared.js"></script>
+<script src="layout.js"></script>
+<script src="orders.js"></script>
+<script>document.getElementById("ordersEmptyIc").innerHTML = Icons.bag;</script>
+</body>
+</html>
