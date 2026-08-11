@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LUMÉ — Botanical Beauty & Skincare</title>
+<meta name="description" content="LUMÉ is a soft, luxurious skincare ritual — cleansers, serums, moisturizers and gifts crafted for an everyday glow." />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="image.png" />
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Botanical Skincare Ritual</span>
+        <h1>Skin that glows<br>from <em>within</em>.</h1>
+        <p>Small-batch cleansers, serums and creams blended with rosewater, lilac and hyaluronic acid — made for a soft, luminous everyday routine.</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-primary">Shop the Ritual</a>
+          <a href="shop.html?cat=set" class="btn btn-outline">Explore Gift Sets</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>18+</strong><span>Botanical formulas</span></div>
+          <div><strong>4.8/5</strong><span>Average rating</span></div>
+          <div><strong>12k+</strong><span>Happy skin journeys</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-blob blob-frame">
+          <span class="center-icon"></span>
+        </div>
+        <div class="hero-float-card c1">
+          <span class="ic"></span>
+          <div><strong>Vitamin C Serum</strong><span>4.9 ★ · 389 reviews</span></div>
+        </div>
+        <div class="hero-float-card c2">
+          <span class="ic"></span>
+          <div><strong>Rated “life-changing”</strong><span>by 12,000+ customers</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Cruelty-free</span><span>Dermatologist tested</span><span>Clean formulas</span><span>Vegan</span><span>Small-batch</span><span>Recyclable packaging</span>
+        <span>Cruelty-free</span><span>Dermatologist tested</span><span>Clean formulas</span><span>Vegan</span><span>Small-batch</span><span>Recyclable packaging</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Shop by Category</span>
+        <h2>Find your next step</h2>
+        <p>Every ritual starts somewhere — browse skincare sorted the way your shelf already is.</p>
+      </div>
+      <div class="cat-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured Edit</span>
+        <h2>This season's favorites</h2>
+        <p>A curated edit of the formulas our community keeps coming back for.</p>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="offer-strip">
+        <div>
+          <span class="eyebrow" style="color:var(--blush)">Limited Time</span>
+          <h2>20% off your first Glow Ritual Set</h2>
+          <p>Use code <strong style="color:#fff">GLOW20</strong> at checkout. Offer ends soon — treat your skin to the full ritual.</p>
+          <a href="shop.html?cat=set" class="btn btn-light" style="margin-top:18px;">Shop Gift Sets</a>
+        </div>
+        <div class="offer-timer" id="offerTimer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head left" style="display:flex; align-items:flex-end; justify-content:space-between; text-align:left; max-width:none;">
+        <div>
+          <span class="eyebrow">Just Landed</span>
+          <h2>New Arrivals</h2>
+        </div>
+        <a href="shop.html" class="btn btn-outline btn-sm">View All</a>
+      </div>
+      <div class="product-grid" id="arrivalsGrid"></div>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head left" style="display:flex; align-items:flex-end; justify-content:space-between; text-align:left; max-width:none;">
+        <div>
+          <span class="eyebrow">Community Favorites</span>
+          <h2>Best Sellers</h2>
+        </div>
+        <a href="shop.html" class="btn btn-outline btn-sm">View All</a>
+      </div>
+      <div class="product-grid" id="bestGrid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">In Their Words</span>
+        <h2>Loved by glowing skin everywhere</h2>
+      </div>
+      <div class="review-grid" id="reviewGrid"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="newsletter">
+        <span class="eyebrow" style="justify-content:center;">Join the Ritual</span>
+        <h2>Get 10% off your first order</h2>
+        <p>Skincare tips, early access and gentle reminders to reapply your SPF.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="data.js"></script>
+<script src="storage.js"></script>
+<script src="shared.js"></script>
+<script src="layout.js"></script>
+<script src="home.js"></script>
+<script>
+  // swap in real icon markup for hero decorative elements after Icons is defined
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".center-icon").innerHTML = Icons.dropper;
+    document.querySelectorAll(".hero-float-card .ic")[0].innerHTML = Icons.dropper;
+    document.querySelectorAll(".hero-float-card .ic")[1].innerHTML = Icons.heart;
+  });
+</script>
+</body>
+</html>

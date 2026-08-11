@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wishlist — LUMÉ</title>
+<link rel="icon" type="image/png" href="image.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="shop">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Wishlist</p>
+      <span class="eyebrow" style="justify-content:center;">Saved For Later</span>
+      <h1>Your Wishlist</h1>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="wishlist-grid product-grid" id="wishGrid"></div>
+      <div class="empty-state" id="wishEmpty" style="display:none;">
+        <div class="ic" id="wishEmptyIc"></div>
+        <h3>Nothing saved just yet</h3>
+        <p>Tap the heart on any product to keep it here for later.</p>
+        <a href="shop.html" class="btn btn-primary" style="margin-top:16px;">Browse the Shop</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="data.js"></script>
+<script src="storage.js"></script>
+<script src="shared.js"></script>
+<script src="layout.js"></script>
+<script src="wishlist.js"></script>
+<script>document.getElementById("wishEmptyIc").innerHTML = Icons.heart;</script>
+</body>
+</html>
